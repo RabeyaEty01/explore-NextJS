@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const index = ({usersDetails}) => {
     
@@ -10,6 +11,10 @@ const index = ({usersDetails}) => {
                 <div key={user.id}>
                    <p>{user.name}</p> 
                    <p>{user.email}</p> 
+                   <Link href={`users/${user.id}`}>
+          <a>explore</a>
+        </Link>
+
                     
                 </div>
                 
